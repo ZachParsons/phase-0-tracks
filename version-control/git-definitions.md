@@ -13,3 +13,6 @@ In version control systems like git/GitHub, a commit is an action taken to 'save
 
 * What is a merge conflict?
 In  version control systems like git/GitHub, a merge conflict is an error that happens when a user is trying to merge their changed branch version repo into its master version repo but it fails because some changes made to the master since the branch was made disagree with the changes made on that branch.*For help with git commands & workflow see the official documentation reference (https://git-scm.com/docs) & book (https://git-scm.com/book/en/v2).
+
+
+**For help with git commands & workflow see the official documentation reference (https://git-scm.com/docs) & book (https://git-scm.com/book/en/v2).
