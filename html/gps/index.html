@@ -71,7 +71,6 @@
       <td>4</td>
       <td>5</td>
     </tr>
-
 </table>
 
 <footer>Footer</footer>
@@ -82,9 +81,24 @@
 <!-- 
 1. What is the purpose of HTML5 semantic tags? Which ones do you see as most useful?
 
+The semantic tags give structure to the document that can be used by other programs (styling, scripting, etc.), & allows document standardization for development teams, & accessibility for disabled people. The most useful tags seem to include <head>, <body>, <section>, <nav>, <a>, <p>.
+
+<head> seems useful for containing title, metadata, links to external styling, charset, etc., <body> seems useful for all that will be displayed in the user's browser, <section> seems useful for HTML5's outline has it has one of the primary structuring tags for the entire document, <a> seems useful for the hypertext nature of the web, & <p> seems useful for all the text content of documents.
+
+
 2. What is the order the browser uses to display elements on a page?
+
+A few different orders could be specified 1) the application layer's client server request-response loop, 2) the browser's rendering engine main flow, & 3) the HTML parser making the DOM tree.
+
+A more general order goes from left to right, top to bottom, outside to inside. Every document has code which is read left to right, which is read from the top line down to the bottom, & document structure is mostly done through nesting semantic tags. The html document boilerplate that Sublime tab-completes shows this order: <html> contains <head> & <body>, <head> contains <title>, <body> contains content.
+
 
 3. What did you learn about Sublime in this challenge? Do you think you'll create more handy snippets at a later date?
 
+I discovered the official Sublime editor documentation, so even though I've created snippets before I feel more comfortable trying them for future content. I also learned how snippets can be used not only for words (tags, strings) but also larger blocks (statements, sections, functions).
+
+
 4. What concept in this challenge was most difficult for you? How can you improve your understanding of this concept?
+
+The different categories of content (metadata, flow, sectioning, heading, phrasing, embedded, palpable, form) were a challenge I'm going to learn more about by studying the MDN page (https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories).
 -->
