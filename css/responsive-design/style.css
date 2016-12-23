@@ -1,3 +1,8 @@
+/*Release 3: Q1. Centered all content on page*/
+* {
+  margin: 0 auto;
+}
+
 body {
   max-width: 960px;
 }
@@ -45,3 +50,38 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+/*@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+}*/
+
+/*lowering text size for smartphones*/
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: medium;
+  }
+  figcaption {
+    font-size: x-small;    
+  }
+  cite {
+    font-size: x-small;
+  }
+  p {
+    font-size: small;
+  }
+  blockquote {
+    font-size: small;
+  }
+  li {
+    font-size: small;
+  }
+}
+
+@media screen and (min-width: 1500px){
+  main {
+    width: 125%;
+  }
+}
+
