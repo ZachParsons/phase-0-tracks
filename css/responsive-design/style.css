@@ -1,3 +1,7 @@
+body {
+  width: 960px;
+}
+
 blockquote {
   border-left: 5px solid blue;
   padding: 15px;
@@ -12,6 +16,9 @@ cite {
 #external-links ul {
   list-style-type: none;
   padding-left: 0px;
+  width: 200px;
+  display: inline-block;
+  vertical-align: ;
 }
 
 /* you're welcome to edit the
@@ -29,4 +36,8 @@ figure {
 figcaption {
   font-style: italic;
   text-align: right;
+}
+
+main {
+  width: 756px;
 }
