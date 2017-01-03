@@ -1,0 +1,281 @@
+<!--
+Write your names here:
+1.
+2.
+We spent [#] hours on this challenge.
+-->
+
+<!-- This challenge uses HTML5 syntax that may not be available in all browsers (It works in Chrome and Safari, from my testing. (<details> and<summary>). -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="gps2-1.css">  <!-- Insert a link to the stylesheet here -->
+    <title>Git Cheat Sheet</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>GitHub: Git Cheat Sheet</h1>
+      <p>Git is the open source distributed version control system that
+        facilitates GitHub activities on your laptop or desktop.
+        This cheat sheet summarizes commonly used Git command line
+        instructions for quick reference.</p>
+    </header>
+
+    <section class="column-1">
+      <article>
+        <h2>INSTALL GIT</h2>
+        <p>GitHub provides desktop clients that include a graphical user
+        interface for the most common repository actions and an automatically
+        updating command line edition of Git for advanced scenarios.</p>
+        <ul>
+          <li><a href="https://windows.github.com">GitHub for Windows</a></li>
+          <li><a href="https://mac.github.com">GitHub for Mac</a></li>
+          <li><a href="http://git-scm.com">Git for All Platforms</a></li>
+        </ul>
+
+        Git distributions for Linux and POSIX systems are available on the
+        official Git SCM web site.
+      </article>
+
+      <article>
+        <h2>CONFIGURE TOOLING</h2>
+        <p>Configure user information for all local repositories</p>
+        <p> To see a summary of each command, click it.</p>
+
+        <details>
+          <summary><code>$ git config --global user.name "[name]"</code></summary>
+          <p>Sets the name you want attached to your commit transactions</p>
+        </details>
+
+        <details>
+          <summary><code>$ git config --global user.email "[email address]"</code></summary>
+          <p>Sets the email you want atached to your commit transactions</p>
+        </details>
+
+        <details>
+          <summary><code>$ git config --global color.ui auto</code></summary>
+          <p>Enables helpful colorization of command line output</p>
+        </details>
+      </article>
+
+      <article>
+        <h2>CREATE REPOSITORIES</h2>
+        <p>Start a new repository or obtain one from an existing URL</p>
+
+        <details>
+          <summary><code>$ git init [project-name]</code></summary>
+          <p>Creates a new local repository with the specified name</p>
+        </details>
+
+        <details>
+          <summary><code>$ git clone [url]</code></summary>
+          <p>Downloads a project and its entire version history</p>
+        </details>
+      </article>
+
+      <article>
+        <h2>MAKE CHANGES</h2>
+        <p>Review edits and craft a commit transaction</p>
+
+        <details>
+          <summary><code>$ git status</code></summary>
+          <p>Lists all new or modified files to be committed</p>
+        </details>
+
+        <details>
+          <summary><code>$ git add [file]</code></summary>
+          <p>Snapshots the file in preparation for versioning</p>
+        </details>
+
+        <details>
+          <summary><code>$ git reset [file]</code></summary>
+          <p>Unstages the file, but preserve its contents</p>
+        </details>
+
+        <details>
+          <summary><code>$ git diff</code></summary>
+          <p>Shows file differences not yet staged</p>
+        </details>
+
+        <details>
+          <summary><code>$ git diff --staged</code></summary>
+          <p>Shows file differences between staging and the last file version</p>
+        </details>
+
+        <details>
+          <summary><code>$ git commit -m "[descriptive message]"</code></summary>
+          <p>Records file snapshots permanently in version history</p>
+        </details>
+      </article>
+
+      <article>
+        <h2>GROUP CHANGES</h2>
+        <p>Name a series of commits and combine completed efforts</p>
+
+        <details>
+          <summary><code>$ git branch</code></summary>
+          <p>Lists all local branches in the current repository</p>
+        </details>
+
+        <details>
+          <summary><code>$ git branch [branch-name]</code></summary>
+          <p>Creates a new branch</p>
+        </details>
+
+        <details>
+          <summary><code>$ git checkout [branch-name]</code></summary>
+          <p>Switches to the specified branch and updates the working directory</p>
+        </details>
+
+        <details>
+          <summary><code>$ git merge [branch]</code></summary>
+          <p>Combines the specified branch’s history into the current branch</p>
+        </details>
+
+        <details>
+          <summary><code>$ git branch -d [branch-name]</code></summary>
+          <p>Deletes the specified branch</p>
+        </details>
+      </article>
+    </section>
+
+    <section class="column-2">
+      <article>
+        <h2>REFACTOR FILENAMES</h2>
+        <p>Relocate and remove versioned files</p>
+
+        <details>
+          <summary><code>$ git rm [file]</code></summary>
+          <p>Deletes the file from the working directory and stages the deletion</p>
+        </details>
+
+        <details>
+          <summary><code>$ git rm --cached [file]</code></summary>
+          <p>Removes the file from version control but preserves the file locally</p>
+        </details>
+
+        <details>
+          <summary><code>$ git mv [file-original] [file-renamed]</code></summary>
+          <p>Changes the file name and prepares it for commit</p>
+        </details>
+      </article>
+
+      <article>
+        <h2>SUPPRESS TRACKING</h2>
+        <p>Exclude temporary files and paths</p>
+
+        <details>
+          <summary><code>*.log
+                    build/
+                    temp-*
+          </code></summary>
+          <p>A text file named .gitignore suppresses accidental versioning of files and paths matching the specified paterns</p>
+        </details>
+
+        <details>
+          <summary><code>$ git ls-files --other --ignored --exclude-standard</code></summary>
+          <p>Lists all ignored files in this project</p>
+        </details>
+      </article>
+
+      <article>
+        <h2>SAVE FRAGMENTS</h2>
+        <p>Shelve and restore incomplete changes</p>
+
+        <details>
+          <summary><code>$ git stash</code></summary>
+          <p>Temporarily stores all modified tracked files</p>
+        </details>
+
+        <details>
+          <summary><code>$ git stash list</code>Lists all stashed changesets</summary>
+          <p></p>
+        </details>
+
+        <details>
+          <summary><code>$ git stash pop</code></summary>
+          <p>Restores the most recently stashed files</p>
+        </details>
+
+        <details>
+          <summary><code>$ git stash drop</code></summary>
+          <p>Discards the most recently stashed changeset</p>
+        </details>
+
+      </article>
+
+      <article>
+        <h2>REVIEW HISTORY</h2>
+        <p>Browse and inspect the evolution of project files</p>
+
+        <details>
+          <summary><code>$ git log</code></summary>
+          <p>Lists version history for the current branch</p>
+        </details>
+
+        <details>
+          <summary><code>$ git log --follow [file]</code></summary>
+          <p>Lists version history for a file, including renames</p>
+        </details>
+
+        <details>
+          <summary><code>$ git diff [first-branch]...[second-branch]</code></summary>
+          <p>Shows content differences between two branches</p>
+        </details>
+
+        <details>
+          <summary><code>$ git show [commit]</code></summary>
+          <p>Outputs metadata and content changes of the specified commit</p>
+        </details>
+      </article>
+
+      <article>
+        <h2>REDO COMMITS</h2>
+        <p>Erase mistakes and craft replacement history</p>
+
+        <details>
+          <summary><code>$ git reset [commit]</code></summary>
+          <p>Undoes all commits after [commit], preserving changes locally</p>
+        </details>
+
+        <details>
+          <summary><code>$ git reset --hard [commit]</code></summary>
+          <p>Discards all history and changes back to the specified commit</p>
+        </details>
+      </article>
+
+      <article>
+        <h2>SYNCHRONIZE CHANGES</h2>
+        <p>Register a repository bookmark and exchange version history</p>
+
+        <details>
+          <summary><code>$ git fetch [bookmark]</code></summary>
+          <p>Downloads all history from the repository bookmark</p>
+        </details>
+
+        <details>
+          <summary><code>$ git merge [bookmark]/[branch]</code></summary>
+          <p>Combines bookmark’s branch into current local branch</p>
+        </details>
+
+        <details>
+          <summary><code>$ git push [alias] [branch]</code></summary>
+          <p>Uploads all local branch commits to GitHub</p>
+        </details>
+
+        <details>
+          <summary><code>$ git pull</code></summary>
+          <p>Downloads bookmark history and incorporates changes</p>
+        </details>
+      </article>
+    </section>
+
+    <footer>
+      This information is copied directly from <a href="https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf">GitHub's Training Cheatsheet</a>.
+    </footer>
+  <!-- Add your reflection here as a comment. -->
+  </body>
+</html>
