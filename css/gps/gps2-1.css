@@ -1,0 +1,45 @@
+* {
+  font-family: helvetica;
+}
+
+header {
+  display: inline-block;
+  float: top;
+  max-width: 90%;
+  background-color: yellow;
+  text-align: center;
+}
+
+.column-1 {
+  float: left;
+  width: 48%;
+  background-color: cyan;
+  padding: 1%;
+
+}
+
+.column-2 {
+  float: right;
+  width: 48%;
+  background-color: magenta;
+  padding: 1%;
+}
+
+a:link {
+  color: white;
+}
+
+#octocat {
+  display: inline-block;
+  float: top;
+  max-width: 9%;
+}
+
+footer {
+  color: white;
+  float: left;
+  width: 100%;
+  background-color: black;
+  border: solid 1px;
+  text-align: center;
+}
