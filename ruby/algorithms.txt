@@ -1,0 +1,77 @@
+Using an elevator:
+
+- find locations of self, elevator, & destination
+  - find vertical floor difference between self & destination
+  - find horizontal path from self to elevator
+  - move within reach of elevator
+  - push call elevator button
+    - if going up press top button
+    - if going down press bottom button
+    - if there's only one button push it
+- for every arriving elevator
+  - identify direction of travel
+    - observe lit arrows or ask riders
+  - if direction is same as destination
+    - move near that elevator's door
+  - else stay near call elevator buttons
+- when same direction elevator doors open
+  - allow occupants to exit
+  - enter elevator through its open doors
+- find elevator control panel
+  - move within reach of panel
+  - push button labeled with same number as destination floor
+  - declare destination floor number
+- move to position allowing other occupants to enter, use control panel, & ride
+- when current floor number displayed equals destination floor
+  - declare exit
+  - move towards doors
+- when doors open
+  - exit elevator through its open doors
+
+
+Exercising at the gym:
+
+- get ready
+  - check schedule
+    - decide if one has available time preferably 1 hour
+    - confirm if gym is open
+  - change into sportswear
+    -put on exercise shirt, pants, shoes
+  - mix & drink pre-workout
+  - dress in seasonal outerwear
+    - if winter put on parka, hat, scarf, gloves
+  - grab outing necessities: phone, wallet, keys, plus headphones
+- depart home
+  - decide based on weather, time, & exertion to travel by
+    -car, walk, jog
+- arrive at gym
+  - check-in
+  - hang-up outerwear
+- strength training
+  - decide lifting weight & reps
+  - stretch 15 moves x 10s each
+  - if upper-body day
+    - 3 set x 10 reps
+      - machine 1 a,b: seated pulldown, seated row
+      - machine 2 a,b,c,d: upright press (2 grips), incline press (2 grips)
+      - machine 3 a,b,c,d: pulley curls
+      - machine 4 a,b,c: barbell bench press (3 grips)
+      - water break
+  - if lower-body day
+    - 3 sets x 10 reps
+      - machine 1: barbell squats
+      - machine 2: crunches
+      - machine 3: incline back raises w free weights
+      - machine 4 a, b: sitting forward leg raises & lying backward leg raises
+      - free-weight 1: calf raises
+      - free-weight 2: lunges
+      -water break
+  - cardio 15min
+    - bike, elliptical, treadmill
+- depart gym
+  - put on outerwear
+  - drive, walk, jog
+- arrive home
+  - mix & drink post-workout
+  - update fitness log
+  - bathe & dress
