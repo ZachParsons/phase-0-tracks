@@ -39,3 +39,12 @@
 
 "How many times does the letter 'a' appear in this string?".count "a"
 # => 4
+
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit.".gsub(/[etaoinshrdlu]/, "e" => "3", "t" => "7", "a" => "4", "o" => "0", "i" => "1", "n" => "2", "s" => "5", "h" => "#", "r" => "2", "d" => "6", "l" => "7", "u" => "v")
+# translate most common letters in the English language in string Lorem to basic number 1337
+
+"space out by two".each_char {|c| print c, "  "}
+# stretch that string
+
+"Never a foot too far, even.".delete(","".").reverse.split.join.downcase.insert(5, " ").insert(7, " ").insert(12, " ").insert(16, " ").insert(20, " ").insert(20, ",").capitalize<<"."
+# overcomplicated palindrome sentence
