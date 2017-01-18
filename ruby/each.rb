@@ -21,14 +21,5 @@ numbers = {1 => 'one', 2 => 'two', 3 => 'three'}
 # iterate through the hash with .each
 
 numbers.each do |digit, word|
-  puts "#{digit} is spelled out as #{word}"
+  puts "#{digit} is spelled out as #{word}"4
 end
-
-
-
-
-
-
-
-
-
