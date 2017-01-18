@@ -12,12 +12,3 @@ end
 puts "After .map call:"
 p letters
 p modified_letters
-
-
-
-
-
-
-
-
-
