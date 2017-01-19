@@ -85,22 +85,22 @@ p test_list == {"carrots"=>1, "apples"=>1, "pizza"=>5, "bread"=>1}
 print_list(test_list)
 
 # Release 4: Reflect
-# What did you learn about pseudocode from working on this challenge?
-I practiced functional decompoistion of a program into separate dedicate behaviors by making multiple methods for creating, adding, removing, updating, printing a hash.
+# # What did you learn about pseudocode from working on this challenge?
+# I practiced functional decompoistion of a program into separate dedicate behaviors by making multiple methods for creating, adding, removing, updating, printing a hash.
 
-# What are the tradeoffs of using arrays and hashes for this challenge?
-The tradeoff of using a hash is the ability to store items names as keys & their quantities as values, whereas arrays would be better suited for a ranked/prioritized list.
+# # What are the tradeoffs of using arrays and hashes for this challenge?
+# The tradeoff of using a hash is the ability to store items names as keys & their quantities as values, whereas arrays would be better suited for a ranked/prioritized list.
 
-# What does a method return?
-A method returns what its body evaluates to, which somtimes involves external arguments passed to internal paramters. 
+# # What does a method return?
+# A method returns what its body evaluates to, which somtimes involves external arguments passed to internal paramters. 
 
-# What kind of things can you pass into methods as arguments?
-Arguments passed into method parameters can be any data type & comparatively small variables or large data structures.
+# # What kind of things can you pass into methods as arguments?
+# Arguments passed into method parameters can be any data type & comparatively small variables or large data structures.
 
-# How can you pass information between methods?
-Passing information between methods can be done by creating variables to compare with multiple method returns (like in our test boolean),
-also data structures with global scope allowing access by multiple methods allow their interaction.
+# # How can you pass information between methods?
+# Passing information between methods can be done by creating variables to compare with multiple method returns (like in our test boolean),
+# also data structures with global scope allowing access by multiple methods allow their interaction.
 
-# What concepts were solidified in this challenge, and what concepts are still confusing?
-Concepts we solidified in this challenge was primarily using methods to manipulate hashes & testing their returns,
-& secondarily we practiced writing/translating pseudocode, defining/comparing/passing data between methods, the distinction between return & print, & implementing documentation provided built-in methods.
+# # What concepts were solidified in this challenge, and what concepts are still confusing?
+# Concepts we solidified in this challenge was primarily using methods to manipulate hashes & testing their returns,
+# & secondarily we practiced writing/translating pseudocode, defining/comparing/passing data between methods, the distinction between return & print, & implementing documentation provided built-in methods.
