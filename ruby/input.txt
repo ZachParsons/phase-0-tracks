@@ -1,0 +1,15 @@
+kitchen
+living room
+bathroom
+bedroom 1
+bedroom 2
+done
+2
+toilet
+0
+oven
+0
+table
+3
+bed
+done
