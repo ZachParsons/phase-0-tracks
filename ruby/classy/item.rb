@@ -15,7 +15,14 @@ class Item
     @color = color
     @price = price
   end
+
+  def to_s
+    "A #{@color} #{@name} that cost #{@price} cents"
+  end
 end
 
-item = Item.new("cardboard box", "brown", 0)
-puts item
+# item = Item.new("cardboard box", "brown", 0)
+# puts item
+
+# item2 = Item.new("piano", "black", 10000)
+# puts item2
