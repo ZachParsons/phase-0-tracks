@@ -162,45 +162,49 @@
 #   - else reassign key's value
 # - print the last version of the hash
 
-# Logic & UI
-
+# Logic
+# create hash with given key names & value data types 
 client_profile = {
   name: "",
   age: 0.0,
   children: 0,
   theme: "",
 }
+update = ""
 
-p "What's your name?"
-client_profile [:name] = gets.chomp
-
-p "What's your age?"
-client_profile [:age] = gets.chomp
-
-p "How many children do you have?"
-client_profile [:children] = gets.chomp
-
-p "What decor theme do you want?"
-client_profile [:theme] = gets.chomp
-
-p "Want to change any of your answers? (enter 'name', 'age', 'children', 'theme', or 'none')"
-update = gets.chomp
-
-case 
-when update == "name"
-  p "What's your name?"
-  client_profile [:name] = gets.chomp
-when update == "age"
-  p "What's your age?"
-  client_profile [:age] = gets.chomp
-when update == "children"
-  p "How many children do you have?"
-  client_profile [:children] = gets.chomp
-when update == "decor"
-  p "What decor theme do you want?"
-  client_profile [:theme] = gets.chomp
-when update == "none"
-  p "OK, here's your profile:"
+# control expression using case statement to take update as entered string & re-question user about one of the hash's assignments
+case
+  when update == "name"
+    puts "What's your name?"
+    client_profile[:name] = gets.chomp
+  when update == "age"
+    puts "What's your age?"
+    client_profile[:age] = gets.chomp
+  when update == "children"
+    puts "How many children do you have?"
+    client_profile[:children] = gets.chomp
+  when update == "decor"
+    puts "What decor theme do you want?"
+    client_profile[:theme] = gets.chomp
+  when update == "none"
+    puts "OK, here's your profile:"
+    p client_profile
 end
 
-p client_profile
+
+# UI
+# questions printed as strings & entered strings assigned to hash key's values, with update 
+puts "What's your name?"
+client_profile[:name] = gets.chomp
+
+puts "What's your age?"
+client_profile[:age] = gets.chomp
+
+puts "How many children do you have?"
+client_profile[:children] = gets.chomp
+
+puts "What decor theme do you want?"
+client_profile[:theme] = gets.chomp
+
+puts "Want to change any of your answers? (enter 'name', 'age', 'children', 'theme', or 'none')"
+update = gets.chomp

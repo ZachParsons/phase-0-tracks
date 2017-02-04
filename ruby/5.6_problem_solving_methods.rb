@@ -30,15 +30,16 @@ end
 p fibonacci_numbers(100)
 #=> 218922995834555169026
 
-# another fib method
-def fibUpTo(max)
-  i1, i2 = 1, 1
-  while i1 <= max
-    yield i1
-    i1, i2 = i2, i1+i2
-  end
-end
-fibUpTo(1000) { |f| print f, " " }
+# another fib method using parallel assignment & fib number maximum as 
+argument
+# def fibUpTo(max)
+#   i1, i2 = 1, 1
+#   while i1 <= max
+#     yield i1
+#     i1, i2 = i2, i1+i2
+#   end
+# end
+# fibUpTo(1000) { |f| print f, " " }
 
 # Release 2: Sort an Array
 # pseudocode for insertion sort
