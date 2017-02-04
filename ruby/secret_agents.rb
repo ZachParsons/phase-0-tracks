@@ -12,7 +12,7 @@
 #Once the condition is met, end the loop and print result of new string.
 
 # encrypt method
-#Reassigns the string with the next letters of the alphabet.
+# reassigns the string with the next letters of the alphabet.
 def encrypt(input)
 index = 0
 output = ""
@@ -66,14 +66,14 @@ def decrypt(input)
      elsif input[input_index] == " "
        output = output + " "  
      end
-     #adds +1 to the alphabet index counter until loop condition is met
+     # adds +1 to the alphabet index counter until loop condition is met
      alphabet_index += 1
    end
-   #Adds +1 to the input index counter until loop condition is met
+   # adds +1 to the input index counter until loop condition is met
    input_index += 1
  end
- #split splits strings by " ".
- #join joins strings by " "
+ # split splits strings by " ".
+ # join joins strings by " "
  output.split.join(" ")
 
 end
@@ -84,7 +84,7 @@ end
 # Release 4: Try a Nested Method Call
 decrypt(encrypt("swordfish"))
 
-#Asks user what method they want to run.
+# asks user what method they want to run.
 puts "Encrypt or decrypt?"
 direction = gets.chomp
 run_encrypt = nil
@@ -98,7 +98,7 @@ direction = nil
 puts "Can't interpret what was typed."
 end
 
-#Gets password to use in encrypt/decrypt method
+# gets password to use in encrypt/decrypt method
 puts "Enter password."
 password = gets.chomp
 if run_encrypt == true
