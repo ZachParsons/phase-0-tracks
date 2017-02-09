@@ -55,7 +55,7 @@ right = {
     state: {
       constitutional_law: ['constitution', 'military'],
       international_law: [],
-      world_history: ['oriental world (one free)', 'classical antiquity (some free', 'christian world (all free']
+      world_history: ['oriental world (one free)', 'classical antiquity (some free)', 'christian world (all free)']
     }
   }
 }
@@ -65,15 +65,20 @@ right = {
 # previously used built-in methods
 # strings: .swapcase, .insert, .center, .upcase, <<, .prepend, .chop, .slice(n..n), .split, .join, .ord, .count, .sub, .gsub, .each_char, .reverse, .capitalize
 # arrays: .each, .map, .delete_if, keep_if, select, reject, .()!
-# hashes: .
+# hashes: .delete_if, .keep_if, .select!, .reject!
 
 # hash built-in methods
 p right[:ethics][:state][:world_history].flatten
+# => ["oriental world (one free)", "classical antiquity (some free", "christian world (all free"]
 
 p right[:ethics][:state][:world_history][0].replace('ancient world (one free)')
+# => "ancient world (one free)"
 
 p right.dig(:ethics, :state, :world_history)
+# => ["oriental world (one free)", "classical antiquity (some free", "christian world (all free"]
 
 p right[:ethics][:state].to_a
+# => [[:constitutional_law, ["constitution", "military"]], [:international_law, []], [:world_history, ["oriental world (one free)", "classical antiquity (some free", "christian world (all free"]]]
 
 p right[:ethics][:state].store("new key", "new value")
+# => right = { ... "new key"=>"new value"}}}
