@@ -41,13 +41,13 @@ class Puppy
 end
 
 # R0 driver code
-Rover = Puppy.new 
-Rover.fetch("ball")
-Rover.speak(3)
-Rover.roll_over(2)
-Rover.dog_years(10)
-Rover.spins(4)
-Rex = Puppy.new
+rover = Puppy.new 
+rover.fetch("ball")
+rover.speak(3)
+rover.roll_over(2)
+rover.dog_years(10)
+rover.spins(4)
+rex = Puppy.new
 
 # misspelling initialize seems to result in no return, output, or error message
 
@@ -69,9 +69,9 @@ class Kitten
 end 
 
 #R2 driver code
-Simba = Kitten.new 
-Simba.jump(48)
-Simba.chase(2)
+simba = Kitten.new 
+simba.jump(48)
+simba.chase(2)
 
 # 1. Use a loop to make 50 instances of your class.
 # 2. Modify your loop so that it stores all of the instances in a data structure.
