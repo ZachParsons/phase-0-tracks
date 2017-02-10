@@ -1,13 +1,45 @@
 # House Maker
 
+# using skills:
+# functional decomposition
+# bug-squishing workflow, attacking one piece of a problem at a time
+
+# development of the program (testing after every added statement):
+# add empty house hash
+# add method add_room to house hash
+# add test code: (before UI) array of rooms
+# add iterator statement adding rooms to house
+# add p house hash
+# declare expectation before running test
+# add method print_house in UI
+# add conditional to method add room
+# add method add_item to room in hash
+#   use append operator
+# add to iterator statement adding item to room
+# add print formating/display
+# add UI with initial prompt puts
+# add loop with conditionals for adding rooms & items to UI
+#   add variable for conditionals
+# add room index by gets.chomp
+# add print call for user feedback
+# add conditional sentinel value check
+# add item name by gets.chomp
+# add method call add_item to room
+
+# add input parser
+# add external input file for testing, via CLI piping, anticipating pathed Rspec file?
+
+
+# Pseudocode:
 # Allow the user to create a house,
 # then add rooms
 # then items
-
 # House can have up to 5 rooms
 # Room can have an unlimited number of items
 
-# dangerous methods designated with bang <!>, dangerous meaning modify data that's in the global scope
+
+# *dangerous methods designated with bang <!>, dangerous meaning modify data that's in the global scope
+# *nesting methods calls in arguments
 
 # BUSINESS LOGIC
 
