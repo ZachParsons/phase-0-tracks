@@ -3,11 +3,11 @@
 
 class Santa
 # Release 3: Refactor with attr_reader and attr_accessor
-  attr_reader :gender, :ethnicity, :age,
+  attr_reader :gender, :ethnicity, :age
   attr_accessor
 
   def initialize(gender, ethnicity)
-    # p "Initializing Santa instance ..."
+    # puts "Initializing Santa instance ..."
 # Release 1: Give Santa Attributes for Christmas
     @gender = gender
     @ethnicity = ethnicity
@@ -16,7 +16,7 @@ class Santa
   end
 
   def speak(occasion)
-    p "Ho, ho, ho! Haaaappy holidays!"
+    puts "Ho, ho, ho! Haaaappy holidays!"
     @occasion = occasion
   end
 
@@ -26,8 +26,8 @@ class Santa
   end
 
   # def about()
-  #   p "Speaks: #{@occasion}"
-  #   p "Favorite Cookie: #{@cookie_type}"
+  #   puts "Speaks: #{@occasion}"
+  #   puts "Favorite Cookie: #{@cookie_type}"
   # end
 
 # Release 2: Change an Attribute with a Method
@@ -36,6 +36,7 @@ class Santa
   end
 
   def get_mad_at (reindeer_name)
+# pattern for handling array iteration edgecases
     reindeer_ranking.slice(reindeer_name)
     reindeer_ranking.insert(-1, reindeer_name)
   end
@@ -58,17 +59,17 @@ end
 
 # driver code
 
-# John = Santa.new
-# John.name("John")
-# John.speak("SantaCon")
-# John.eat_milk_n_cookies("snickerdoodle")
-# John.about
+# john = Santa.new
+# john.name("John")
+# john.speak("SantaCon")
+# john.eat_milk_n_cookies("snickerdoodle")
+# john.about
 
-# Joe = Santa.new
-# Joe.name("Joe")
-# Joe.speak("elsewhere")
-# Joe.eat_milk_n_cookies("thin mint")
-# Joe.about
+# joe = Santa.new
+# joe.name("Joe")
+# joe.speak("elsewhere")
+# joe.eat_milk_n_cookies("thin mint")
+# joe.about
 
 
 # Add some diverse initializations to your file as driver code, then test your work by running the program from the command line. Feel free to get fancy with loops and whatnot, or keep it simple if you prefer.
@@ -87,8 +88,8 @@ end
 # end
 
 # example_ethnicities = ["african", "asian" "black", "european", "latinx", "middle eastern", "native american", "pacific islander", "south asian", "white", "other", "N/A"]
-# example_ethnicities.length.times do |i|
-#   santas << Santa.new(example_ethnicities[i])
+# example_ethnicities.length.times do |e|
+#   santas << Santa.new(example_ethnicities[e])
 # end
 
 # santa1 = Santa.new("JD", "ftm", "south asian")
@@ -97,7 +98,7 @@ end
 # santa2 = Santa.new("DJ", "pangender", "african")
 # santa2.about
 
-# santa3 = Santa.new("Job")
+# santa3 = Santa.new("Pat")
 # santa3.gender = "male"
 # santa3.about
 
@@ -105,8 +106,8 @@ end
 example_genders = ["agender", "androgynous", "bigender", "female", "ftm", "genderqueer", "gender fluid", "male", "mtf", "non-binary", "pangender", "trans", "transgender", "other", "N/A"]
 example_ethnicities = ["african", "asian" "black", "european", "latinx", "middle eastern", "native american", "pacific islander", "south asian", "white", "other", "N/A"]
 
-100.times do 
+1000.times do 
   santas = Santa.new(example_genders.sample, example_ethnicities.sample)
-  p "Here at SantaCon there is at least one #{santas.age} year-old, #{santas.gender}, #{santas.ethnicity} Santa!"
-  p "_______________________________________________________________________________"
+  puts "At SantaCon there is at least one #{santas.age} year-old, #{santas.gender}, #{santas.ethnicity} Santa!"
+  puts "_" * 80
 end
