@@ -3,8 +3,8 @@
 
 class Santa
 # Release 3: Refactor with attr_reader and attr_accessor
-  attr_reader :ethnicity, :age,
-  attr_accessor :gender
+  attr_reader :gender, :ethnicity, :age,
+  attr_accessor
 
   def initialize(gender, ethnicity)
     # p "Initializing Santa instance ..."
@@ -91,15 +91,15 @@ end
 #   santas << Santa.new(example_ethnicities[i])
 # end
 
-# santa = Santa.new("JD", "ftm", "south asian")
-# santa.about
+# santa1 = Santa.new("JD", "ftm", "south asian")
+# santa1.about
 
-# santa = Santa.new("DJ", "pangender", "african")
-# santa.about
+# santa2 = Santa.new("DJ", "pangender", "african")
+# santa2.about
 
-# santa = Santa.new("Job")
-# santa.gender = "male"
-# santa.about
+# santa3 = Santa.new("Job")
+# santa3.gender = "male"
+# santa3.about
 
 # Release 4: Build Many, Many Santas
 example_genders = ["agender", "androgynous", "bigender", "female", "ftm", "genderqueer", "gender fluid", "male", "mtf", "non-binary", "pangender", "trans", "transgender", "other", "N/A"]
