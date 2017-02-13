@@ -14,7 +14,7 @@ class GuessingGame
     @is_over = false
   end
   
-  def guess_prompter
+  def guess_prompter()
     puts "P2 Enter a character to guess:"
     @p2char = gets.chomp.downcase
     if @p2char.length > 1
@@ -23,7 +23,7 @@ class GuessingGame
     guess_counter
   end
   
-  def guess_counter
+  def guess_counter()
     if @all_guessed_chars.include?(@p2char)
       puts "P2 has already guessed this character, try again."
       per_turn_feedback
@@ -34,7 +34,7 @@ class GuessingGame
     end
   end
   
-  def match_checker
+  def match_checker()
     if   @p1word.include? @p2char
       @matched_chars << @p2char
       puzzle_updater
@@ -45,7 +45,7 @@ class GuessingGame
     end
   end
   
-  def puzzle_updater
+  def puzzle_updater()
     index = 0
     @p1word.each_char do |c|
       if c == @p2char
@@ -56,13 +56,13 @@ class GuessingGame
     per_turn_feedback
   end
   
-  def per_turn_feedback
+  def per_turn_feedback()
     puts "Puzzle: #{@puzzle}"
     puts "Guesses left: #{@total_guesses - @guess_count}"
     puts "Unmatched characters: #{@unmatched_chars}"
   end
   
-  def play
+  def play()
     until is_over == true
       guess_prompter
       if @p1word != @puzzle
