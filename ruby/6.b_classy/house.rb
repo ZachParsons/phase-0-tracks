@@ -60,21 +60,23 @@ class House
   end
 end
 
-
+# driver code
 # Make house
 house = House.new
 
 # Make living room
-living_room = Room.new("Living room", 10, 10,)
-piano = Item.new("Piano", "black", 10000)
+living_room = Room.new("Living room", 20, 35)
+puts living_room
+piano = Item.new("Piano", "black", 1000000)
 box = Item.new("cardboard box", "brown", 0)
 living_room.items << piano
 living_room.items << box
+# puts living_room.total_value
 
 # Make kitchen
-kitchen = Room.new("Kitchen", 10, 10)
-sink = Item.new("sink", "white", 5000)
-oven = Item.new("oven", "white", 3000)
+kitchen = Room.new("Kitchen", 10, 15)
+sink = Item.new("sink", "white", 30000)
+oven = Item.new("oven", "white", 50000)
 kitchen.items << sink
 kitchen.items << oven
 
@@ -84,3 +86,5 @@ house.add_room(kitchen)
 puts house
 puts house.total_value
 puts house.square_footage
+
+# UI

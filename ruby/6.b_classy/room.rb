@@ -34,4 +34,3 @@ class Room
     "#{@name} (#{@width} x #{@length})"
   end
 end
-

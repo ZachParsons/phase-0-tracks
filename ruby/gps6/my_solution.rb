@@ -102,7 +102,7 @@ end
 # Reflection Section
 
 # What are the differences between the two different hash syntaxes shown in the state_data file?
-# In the state data file, the nested hashes have this structure: h = {k => v{k;v, k:v}}, i.e. the deepest two key-value pairs are using symbol notation & are themselves the value of the state_name key using hash rocket notation. 
+# In the state data file, the nested hashes have this structure: h = {k => {k:v, k:v}}, i.e. the deepest two key-value pairs are using symbol notation & are themselves the value of the state_name key using hash rocket notation. 
 
 # # What does require_relative do? How is it different from require?
 # (from above line 9) require_relative allows for loading/accessing another file via a relative path to the same local directory, its signature returns true-false, in contrast, require allows for loading/accessing another file from an absolute path to even remote directories such as code libraries or gems
@@ -111,7 +111,7 @@ end
 # Iterating through a hash can be done with block method do and built-in methods .each, & .map.
 
 # # When refactoring virus_effects, what stood out to you about the variables, if anything?
-# It was interesting that only the method initalize needed to take explicit arguments.
+# It was interesting that only the method initialize needed to take explicit arguments.
 
 # # What concept did you most solidify in this challenge?
-# The concepts solidied in this challenge were using *class methods* to iterate through & process a nested hash.
+# The concepts solidified in this challenge were using *class methods* to iterate through & process a nested hash.
