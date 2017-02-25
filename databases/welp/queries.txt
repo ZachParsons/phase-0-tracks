@@ -1,0 +1,35 @@
+2. You've joined two tables before. How do you join three?
+
+SELECT * FROM reviews
+JOIN businesses
+JOIN users
+WHERE reviews.business_id = businesses.id AND reviews.user_id = users.id;
+=>
+1|4|Great view|1|1|1|Grundy Hollow Wedding Chapel|1|Bradford|Pitt
+2|5|Quick service|2|1|2|Amir's Towing|1|Bradford|Pitt
+3|1|Horrible staff|1|3|1|Grundy Hollow Wedding Chapel|3|Angela|Jolie
+
+
+3. There are some repetitive columns if we choose to view all fields. Choose instead to just view the user's names, the business name, the star rating, and the comment.
+
+SELECT reviews.stars, reviews.comment, businesses.name, users.lastname
+FROM reviews
+JOIN businesses ON reviews.business_id=businesses.id
+JOIN users ON reviews.user_id=users.id;
+=>
+4|Great view|Grundy Hollow Wedding Chapel|Pitt
+5|Quick service|Amir's Towing|Pitt
+1|Horrible staff|Grundy Hollow Wedding Chapel|Jolie
+
+
+4. How do you view the data of all three tables for just one particular business?
+
+SELECT reviews.stars, reviews.comment, businesses.name, users.lastname
+FROM reviews
+JOIN businesses ON reviews.business_id = businesses.id
+JOIN users ON reviews.user_id = users.id
+WHERE businesses.name = "Grundy Hollow Wedding Chapel";
+=>
+4|Great view|Grundy Hollow Wedding Chapel|Pitt
+1|Horrible staff|Grundy Hollow Wedding Chapel|Jolie
+
