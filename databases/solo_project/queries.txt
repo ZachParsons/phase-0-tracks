@@ -111,3 +111,37 @@ sqlite> SELECT * FROM books;
 1|Courage to Create|1972|true|1
 6|Odd One In|2008|true|4
 
+Release 3: Research on Your Own
+best resource "Syntax Diagrams For SQLite":
+https://sqlite.org/syntaxdiagrams.html
+
+
+INNER JOIN:
+SELECT books.title, authors.lastname FROM books INNER JOIN authors ON books.author_id = authors.id;
+=>
+Courage to Create|May
+Odd One In|Zupancic
+Fabric of Affect in Psychoanalytic Discourse|Green
+Desire in Language|Kristeva
+Revolution in Poetic Language|Kristeva
+Black Sun|Kristeva
+
+LEFT JOIN:
+SELECT * FROM books LEFT JOIN authors ON books.author_id = authors.id;
+=>
+1|Courage to Create|1972|true|5|5|Rollo|May|1909|false
+6|Odd One In|2008|true|4|4|Alenka|Zupancic|1966|true
+7|Fabric of Affect in Psychoanalytic Discourse|1973|false|6|6|Andre|Green|1927|false
+8|Desire in Language|1977|false|3|3|Julia|Kristeva|1941|true
+9|Revolution in Poetic Language|1984|false|3|3|Julia|Kristeva|1941|true
+10|Black Sun|1987|false|3|3|Julia|Kristeva|1941|true
+
+RIGHT/FULL/OUTER JOIN:
+SELECT books.title, authors.lastname FROM books CROSS JOIN authors ON books.author_id = authors.id;
+=>
+Courage to Create|May
+Odd One In|Zupancic
+Fabric of Affect in Psychoanalytic Discourse|Green
+Desire in Language|Kristeva
+Revolution in Poetic Language|Kristeva
+Black Sun|Kristeva
