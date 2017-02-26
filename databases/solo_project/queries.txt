@@ -1,0 +1,113 @@
+Release 1: Build Your Database
+
+CREATE TABLE authors (
+ id INTEGER PRIMARY KEY,
+ firstname VARCHAR(255),
+ lastname VARCHAR(255),
+ YOB INT,
+ living BOOLEAN
+ );
+
+CREATE TABLE books (
+ id INTEGER PRIMARY KEY,
+ title VARCHAR(255),
+ year INT,
+ written_en BOOLEAN,
+ author_id INT,
+ FOREIGN KEY(author_id) REFERENCES authors(id)
+ );
+
+INSERT INTO authors (firstname, lastname, YOB, living) VALUES ("Rollo", "May", 1909, "false");
+INSERT INTO authors (firstname, lastname, YOB, living) VALUES ("Andre", "Green", 1927, "false");
+INSERT INTO authors (firstname, lastname, YOB, living) VALUES ("Julia", "Kristeva", 1941, "true");
+INSERT INTO authors (firstname, lastname, YOB, living) VALUES ("Alenka", "Zupancic", 1966, "true");
+
+INSERT INTO books (title, year, written_en, author_id) VALUES ("Courage to Create", 1972, "true", 1);
+INSERT INTO books (title, year, written_en, author_id) VALUES ("Fabric of Affect in Psychoanalytic Discourse", 1973, "false", 2);
+INSERT INTO books (title, year, written_en, author_id) VALUES ("Desire in Language", 1977, "false", 3);
+INSERT INTO books (title, year, written_en, author_id) VALUES ("Revolution in Poetic Language", 1984, "false", 3);
+INSERT INTO books (title, year, written_en, author_id) VALUES ("Black Sun", 1987, "false", 3);
+INSERT INTO books (title, year, written_en, author_id) VALUES ("Odd One In", 2008, "true", 4);
+
+
+Rollo May
+  1972 Courage to Create
+Andre Green
+  1973 Fabric of Affect in Psychoanalytic Discourse
+Julia Kristeva
+  1974 Revolution in Poetic Language
+  1977 Desire in Language: A Semiotic Approach to Literature & Art
+  1987 Black Sun
+Alenka Zupancic
+  2008 Odd One In
+
+
+Release 2: Execute SQL Queries
+
+Display the information in one table (either table is fine).
+SELECT * FROM authors;
+=>
+1|Rollo|May|1909|false|
+2|Andre|Green|1927|false|
+3|Julia|Kristeva|1941|true|
+4|Alenka|Zupancic|1966|true|
+
+2. Update an item that meets some condition (you can choose a condition that makes sense).
+
+SELECT lastname FROM authors;
+=>
+May
+Green
+Kristeva
+Zupancic
+
+SELECT firstname FROM authors WHERE living="true";
+=>
+Julia
+Alenka
+
+3. Display the information in both tables using one query
+
+SELECT * FROM authors, books WHERE books.author_id = authors.id;
+=>
+1|Rollo|May|1909|false|1|Courage to Create|1972|true|1
+2|Andre|Green|1927|false|2|Fabric of Affect in Psychoanalytic Discourse|1973|false|2
+3|Julia|Kristeva|1941|true|3|Desire in Language|1977|false|3
+3|Julia|Kristeva|1941|true|4|Revolution in Poetic Language|1984|false|3
+3|Julia|Kristeva|1941|true|5|Black Sun|1987|false|3
+4|Alenka|Zupancic|1966|true|6|Odd One In|2008|true|4
+
+4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+SELECT authors.lastname, books.title FROM authors, books WHERE books.author_id = authors.id;
+=>
+May|Courage to Create
+Green|Fabric of Affect in Psychoanalytic Discourse
+Kristeva|Desire in Language
+Kristeva|Revolution in Poetic Language
+Kristeva|Black Sun
+Zupancic|Odd One In
+
+SELECT authors.YOB, books.year FROM authors, books WHERE books.author_id = authors.id;
+=>
+1909|1972
+1927|1973
+1941|1977
+1941|1984
+1941|1987
+1966|2008
+
+5. Delete an item that meets some condition (you can choose a condition that makes sense).
+
+DELETE FROM authors WHERE living="false";
+SELECT * FROM authors;
+=>
+3|Julia|Kristeva|1941|true
+4|Alenka|Zupancic|1966|true
+
+DELETE FROM books WHERE written_en = "false";
+sqlite> SELECT * FROM books;
+=>
+1|Courage to Create|1972|true|1
+6|Odd One In|2008|true|4
+
