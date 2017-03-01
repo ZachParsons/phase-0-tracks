@@ -1,6 +1,6 @@
 # require gems
 require 'sqlite3'
-require 'faker'
+# require 'faker'
 
 # create SQLite3 database
 erdb = SQLite3::Database.new("exhibition_reviews.db")
@@ -17,8 +17,8 @@ create_exhibitions_table_cmd = <<-SQL
     exh_title VARCHAR(255),
     opening_date VARCHAR(255),
     duration VARCHAR(255),
-    press VARCHAR(255)
-    catalog BOOLEAN,
+    press VARCHAR(255),
+    catalog BOOLEAN
   )
 SQL
 
@@ -33,8 +33,8 @@ create_works_table_cmd = <<-SQL
     style VARCHAR(255),
     subject VARCHAR(255),
     work_title VARCHAR(255),
-    exhibition_id
-    FOREIGN KEY (exhibitions_id) REFERENCES exhibitions(id));
+    exhibition_id INT,
+    FOREIGN KEY (exhibition_id) REFERENCES exhibitions(id));
   )
 SQL
 
@@ -43,8 +43,8 @@ erdb.execute(create_exhibitions_table_cmd)
 erdb.execute(create_works_table_cmd)
 
 # methods
-def create_exhibition(db, exh_title, location, exhibitor, opening_date, duration, curator, artists, catalog, press)
-  erdb.execute("INSERT INTO exhibitions (location, exhibitor, opening_date, duration, curator, artists, catalog, press) VALUES (?, ?, ?, ?, ?, ?, ?, ?)" [location, exhibitor, opening_date, duration, curator, artists, catalog, press])
+def create_exhibition(db, exhibitor, artists, curator, location, exh_title, opening_date, duration, press, catalog)
+  erdb.execute("INSERT INTO exhibitions (exhibitor, artists, curator, location, exh_title, opening_date, duration, press, catalog) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)" [exhibitor, artists, curator, location, exh_title, opening_date, duration, press, catalog])
 end
 def read_exhibition(db)
   erdb.execute("SELECT * FROM exhibitions")
@@ -56,8 +56,8 @@ def delete_exhibition(db, attribute, deletable)
   erdb.execute("DELETE FROM exhibitions WHERE #{attribute} = #{deletable}")
 end
 
-def create_work(db, work_title, artist, completed_date, medium, scale, style, subject)
-  erdb.execute("INSERT INTO works (work_title, artist, completed_date, medium, scale, style, subject) VALUES (?, ?, ?, ?, ?, ?, ?)" [work_title, artist, completed_date, medium, scale, style, subject])
+def create_work(db, artist, completed_date, medium, scale, style, subject, work_title)
+  erdb.execute("INSERT INTO works (artist, completed_date, medium, scale, style, subject, work_title) VALUES (?, ?, ?, ?, ?, ?, ?)" [artist, completed_date, medium, scale, style, subject, work_title])
 end
 def read_work(db)
   erdb.execute("SELECT * FROM works")
@@ -92,7 +92,7 @@ puts "Who published reviews of this exhibition?"
 press = gets.chomp
 puts "Does this exhibition have a catalog?"
 catalog = gets.chomp
-erdb.create_exhibition(erdb, exhibitor, artists, curator, location, opening_date, duration, exh_title, press, catalog)
+erdb.create_exhibition(erdb, exhibitor, artists, curator, location, exh_title, opening_date, duration, press, catalog)
 erdb.execute("SELECT * FROM exhibitions")
 
 puts "Let's review a work..."
