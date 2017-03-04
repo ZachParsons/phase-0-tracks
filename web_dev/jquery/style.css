@@ -1,0 +1,17 @@
+body {
+  background-color: gray;
+}
+
+#paragraph {
+  font-family: Helvetica;
+}
+
+#image {
+  width: 1000px;
+}
+
+#button {
+  width: 100px;
+  background-color: teal;
+  color: pink;
+}
