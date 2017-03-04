@@ -19,7 +19,7 @@ Syntax: after CCS: $(selector).action()
     - document ready event method makes it run after loading, two syntaxes:
     - $(document).ready(function(){...});
     - $(function(){
-Events: user actions that webpage can response to - "fire"
+Events: user actions that webpage can response to - 'fire'
     - mouse
     - keyboard
     - form
@@ -76,7 +76,7 @@ Siblings 'sideways':
     - prev()
     - prevAll()
     - prevUntil()
-Filtering: for selecting elements that match or don't
+Filtering: for selecting elements that match or dont
     - first()
     - last()
     - eq()
