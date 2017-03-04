@@ -25,27 +25,27 @@
 
 $(document).ready(function() {
 
-// adds text to paragraph
-$("p").append("Some appended text.");
+  // adds text to paragraph
+  $("p").append("Some appended text.");
 
-// changes dimension of image on click
-$("img").click(function(){
-  $("img").width(500);
-})
+  // changes dimension of image on click
+  $("img").click(function(){
+    $("img").width(500);
+  })
 
-// toggles paragraph on button click
-$("button").click(function(){
-  $("p").toggle();
-});
+  // toggles paragraph on button click
+  $("button").click(function(){
+    $("p").toggle();
+  });
 
-// changes paragraph text color on hover (start & end) 
-$("p").hover(
-  function(){
-    $(this).css('color', 'pink');
-  },
-  function()
-    {$(this).css('color', 'teal');
-  }
-);
+  // changes paragraph text color on hover (start & end) 
+  $("p").hover(
+    function(){
+      $(this).css('color', 'pink');
+    },
+    function()
+      {$(this).css('color', 'teal');
+    }
+  );
 
 });
