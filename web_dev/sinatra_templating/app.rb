@@ -25,3 +25,9 @@ post '/students' do
 end
 
 # add static resources
+
+# route to new page template 'campuses'
+get '/campuses' do
+    @campuses = db.execute("SELECT students.campus FROM students")
+    erb :campuses
+end

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css"> 
+  <title>Campuses</title>
+</head>
+<body>
+  <p>The current campus locations attended by our students:</p>
+  <ul> <% campuses = [] %>
+    <% @campuses.each do |campus_hash| %>
+      <% if !campuses.include?(campus_hash["campus"]) %>
+        <% campuses << campus_hash["campus"] %>
+      <% end %>
+    <% end %>
+      <% campuses.each do |campus| %>
+      <li> <%= campus %> </li>
+    <% end %>
+  </ul>
+
+</body>
+</html>
