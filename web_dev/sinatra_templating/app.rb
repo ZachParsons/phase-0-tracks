@@ -28,6 +28,15 @@ end
 
 # route to new page template 'campuses'
 get '/campuses' do
-    @campuses = db.execute("SELECT students.campus FROM students")
+    @campuses = db.execute("SELECT students.campus, campuses.location FROM students, campuses")
     erb :campuses
+end
+
+get '/campus/new' do
+  erb :new_campus
+end
+
+post '/campuses' do
+  db.execute("INSERT INTO students (campus) VALUES (?)", [params['campus']])
+  redirect '/'
 end

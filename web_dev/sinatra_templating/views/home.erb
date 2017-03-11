@@ -8,8 +8,11 @@
   <h1>Student Management System</h1>
   <p>Welcome to the student management system.</p>
   <p>Click <a href="campuses">here</a> to view campus locations.</p>
+
+  <p>Click <a href="campus/new">here</a> to create a new campus location.</p>
   
   <p>Click <a href="students/new">here</a> to create a new student.</p>
+
   <ul>
     <% @students.each do |student| %>
       <li><%= student['name'] %>, <%= student['age'] %></li>
